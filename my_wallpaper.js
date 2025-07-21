@@ -6,6 +6,8 @@ let rect_height = 30;
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
   //pWallpaper.output_mode(GRID_WALLPAPER);
+  //swap these two out for the different tile modes
+  //choose glide or glyph (standard) modes
   
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(true); //set this to false when you're ready to print
@@ -13,7 +15,9 @@ function setup_wallpaper(pWallpaper) {
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
+  //flexibility to change this
   pWallpaper.grid_settings.row_offset  = 50;
+  //horizontally moves tiles like bricks or on top of each other
 }
 
 function wallpaper_background() {
