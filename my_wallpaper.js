@@ -9,6 +9,7 @@ let ellipse_height = 18;
 let x_example = 13;
 let y_example = 7;
 
+
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
   //pWallpaper.output_mode(GRID_WALLPAPER);
@@ -45,8 +46,32 @@ if(y_example > 5){
 
 }
 
+//let verticleXline = 100;
+//let horizontalYline = 100;
+//let diamondsize = 30;
 
+let middleX = 150; //that line down the middle
+let middleY = 100;
+let size = 30
 
+//diamond
+// line(middleX, middleY-size, middleX+size, middleY);
+// line(middleX+size, middleY, middleX, middleY+size);
+// line(middleX, middleY+size, middleX-size, middleY);
+// line(middleX -size, middleY, middleX, middleY-size);
+
+fill(200,40,200)
+
+  beginShape();
+
+  // Add vertices.
+  vertex(middleX, middleY-size);
+  vertex(middleX+size, middleY);
+  vertex(middleX, middleY+size);
+  vertex(middleX -size, middleY);
+
+  // Stop drawing the shape.
+  endShape(CLOSE);
 
 
 
