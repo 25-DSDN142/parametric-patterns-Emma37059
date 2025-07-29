@@ -39,7 +39,16 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 //above is my draw function but it doesn't clear so doesn't reset
 
 fill(200,40,200) //colour of diamond 
-  beginShape(DIAMOND); //making the lines into diamond shape
+ 
+
+  if(diamondsize ){
+
+    fill(100, 60, 100);
+  }else{
+    fill(0,255,2)
+  }
+
+   beginShape(); //making the lines into diamond shape
 
   vertex(verticleXline, horizontalYline - diamondsize);
   vertex(verticleXline + diamondsize, horizontalYline);
@@ -48,10 +57,6 @@ fill(200,40,200) //colour of diamond
 
   endShape(CLOSE);
 
-  if(DIAMOND > 20){
-
-    fill(100, 60, 100);
-  }
 
   //ellipse(200, 200, cornerfillage_width, cornerfillage_height);
 
