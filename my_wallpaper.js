@@ -2,13 +2,17 @@
 //middle box size
 let rect_width  = 20;
 let rect_height = 20;
-//ellipse size
-let ellipse_width = 18;
-let ellipse_height = 18;
-
+//PBA example
 let x_example = 13;
 let y_example = 7;
 
+//Diamond perameters
+let verticleXline = 100; //verticle line down the middle of diamond
+let horizontalYline = 100; // horizontal line across the middle of diamond
+let diamondsize = 30; //size of diamond
+//fillage
+//let cornerfillage_width = 50;
+//let cornerfillage_height = 50;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -34,44 +38,62 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 //above is my draw function but it doesn't clear so doesn't reset
 
-//
+fill(200,40,200) //colour of diamond 
+  beginShape(DIAMOND); //making the lines into diamond shape
 
-rect (20, 20, x_example, y_example);
+  vertex(verticleXline, horizontalYline - diamondsize);
+  vertex(verticleXline + diamondsize, horizontalYline);
+  vertex(verticleXline, horizontalYline + diamondsize);
+  vertex(verticleXline - diamondsize, horizontalYline);
+
+  endShape(CLOSE);
+
+  if(DIAMOND > 20){
+
+    fill(100, 60, 100);
+  }
+
+  //ellipse(200, 200, cornerfillage_width, cornerfillage_height);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//rect (20, 20, x_example, y_example);
 
 // across, down/up, across, downup
 
-if(y_example > 5){
+//if(y_example > 5){
 //because the let=y is bigger than 5 it changes the let=x to 12
-  x = 12
+//  x = 12
 
-}
+//}
 
-//let verticleXline = 100;
-//let horizontalYline = 100;
-//let diamondsize = 30;
 
-let middleX = 150; //that line down the middle
-let middleY = 100;
-let size = 30
 
-//diamond
-// line(middleX, middleY-size, middleX+size, middleY);
-// line(middleX+size, middleY, middleX, middleY+size);
-// line(middleX, middleY+size, middleX-size, middleY);
-// line(middleX -size, middleY, middleX, middleY-size);
 
-fill(200,40,200)
-
-  beginShape();
-
-  // Add vertices.
-  vertex(middleX, middleY-size);
-  vertex(middleX+size, middleY);
-  vertex(middleX, middleY+size);
-  vertex(middleX -size, middleY);
-
-  // Stop drawing the shape.
-  endShape(CLOSE);
 
 
 
@@ -139,3 +161,8 @@ fill(200,40,200)
   //!!further down in code, is on top, first line of code is at the bottom
   
   
+//diamond
+// line(middleX, middleY-size, middleX+size, middleY);
+// line(middleX+size, middleY, middleX, middleY+size);
+// line(middleX, middleY+size, middleX-size, middleY);
+// line(middleX -size, middleY, middleX, middleY-size);
