@@ -2,10 +2,16 @@
 //Diamond perameters
 let verticleXline = 100; //verticle line down the middle of diamond
 let horizontalYline = 100; // horizontal line across the middle of diamond
-let diamondsize = 30; //size of diamond
+let diamondsize = 100; //size of diamond
 //fillage
-let cornerfillage_width = 50;
-let cornerfillage_height = 50;
+let cornerfillage_width = 75;
+let cornerfillage_height = 75;
+let extracircle = 20; //yellow circle behind size compared to mini circle
+//starshape
+let seventyfive_point = 75; 
+let onetwentyfive_point = 125; 
+let starsize_pos = 175; //how long the star-points are down and right (usually 175)
+let starsize_neg = 25; //how long the star-points are up and left (usually 25)
 
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -13,8 +19,8 @@ function setup_wallpaper(pWallpaper) {
   //swap these two out for the different tile modes
   //choose glide or glyph (standard) modes
   
-  pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.resolution(A3);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -25,23 +31,90 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(204, 244, 252); //colour
+  background(197, 184, 255); // bluecolour
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 //above is my draw function but it doesn't clear so doesn't reset
 
 
+//background as a colour changing square
+if(diamondsize > 70){ //if diamond is bigger then star, the filling will disapear
+  noStroke();
+fill(204, 244, 252); // bluecolour
+rect(100, 100, 200, 200);
+    }else{
+noStroke();
+fill(255, 208, 184);
+rect(100, 100, 200, 200);
+  }
 
+//backstar
+noStroke();
+fill(255, 245, 48); //yellow
 
-fill(200,40,200) //colour of diamond 
- 
+beginShape();
+vertex(seventyfive_point, seventyfive_point);
+vertex(onetwentyfive_point, seventyfive_point);
+vertex(100, starsize_neg);
+endShape(CLOSE);
 
-  if(diamondsize > 30){
+beginShape();
+vertex(seventyfive_point, seventyfive_point);
+vertex(seventyfive_point, onetwentyfive_point);
+vertex(starsize_neg, 100);
+endShape(CLOSE);
 
-    fill(100, 60, 100);
+beginShape();
+vertex(seventyfive_point, onetwentyfive_point);
+vertex(onetwentyfive_point, onetwentyfive_point);
+vertex(100, starsize_pos);
+endShape(CLOSE);
+
+beginShape();
+vertex(onetwentyfive_point, onetwentyfive_point);
+vertex(onetwentyfive_point, seventyfive_point);
+vertex(starsize_pos, 100);
+endShape(CLOSE);
+
+beginShape();
+vertex(seventyfive_point, seventyfive_point);
+vertex(onetwentyfive_point, seventyfive_point);
+vertex(onetwentyfive_point, onetwentyfive_point);
+vertex(seventyfive_point, onetwentyfive_point);
+endShape(CLOSE);
+
+//fillage circle in corners
+if(cornerfillage_width && cornerfillage_height < 175){ //if the main circle is not close to the diamond / small, then a second background circle with appear
+
+  beginShape();
+
+arc(0, 0, cornerfillage_width + extracircle, cornerfillage_height + extracircle, 0, 90); //top left
+arc(200, 0, cornerfillage_width + extracircle, cornerfillage_height + extracircle, 90, 180); //top right
+arc(0, 200, cornerfillage_width +extracircle, cornerfillage_height + extracircle, 270, 360); //bottom left
+arc(200, 200, cornerfillage_width + extracircle, cornerfillage_height + extracircle, 180, 270); //bottom right
+
+endShape(CLOSE);
+}
+
+//mini/main circle
+fill(255, 179, 205); //light pink
+arc(0, 0, cornerfillage_width, cornerfillage_height, 0, 90); //top left
+arc(200, 0, cornerfillage_width, cornerfillage_height, 90, 180); //top right
+arc(0, 200, cornerfillage_width, cornerfillage_height, 270, 360); //bottom left
+arc(200, 200, cornerfillage_width, cornerfillage_height, 180, 270); //bottom right
+//x, y is the arc centre, w, h, start and stop //code found on p5.js with tutorial
+
+//diamond
+stroke(197, 184, 255) //purple
+
+  if(diamondsize > 70){ //if diamond is bigger then star, the filling will disapear
+
+    noFill();
+    
   }else{
-    fill(0,255,2)
+    fill(197, 184, 255) //colour of diamond, purple
+    
   }
 
    beginShape(); //making the lines into diamond shape
@@ -53,124 +126,4 @@ fill(200,40,200) //colour of diamond
 
   endShape(CLOSE);
 
-
-  //ellipse(200, 200, cornerfillage_width, cornerfillage_height);
-
-arc(200, 175, leaf_length, leaf_thickness, 90, 270); //side
-arc(175, 200, leaf_thickness, leaf_length, 180, 0); //bottom
-//x, y, width, height
-//bottom left
-arc(25, 200, leaf_length, leaf_thickness, 180, 0) //bottom
-arc(0, 175, leaf_thickness, leaf_length, 270, 90) //side
-//top right
-arc(200, 25, leaf_length, leaf_thickness, 90, 270) //side
-arc(175, 0, leaf_thickness, leaf_length, 0, 180) //bottom
-//top left
-arc(25, 0, leaf_length, leaf_thickness, 0, 180) //side
-arc(0, 25, leaf_thickness, leaf_length, 270, 90) //bottom
-
-//x, y is the arc centre, w, h, start and stop //code found on p5.js with tutorial
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//rect (20, 20, x_example, y_example);
-
-// across, down/up, across, downup
-
-//if(y_example > 5){
-//because the let=y is bigger than 5 it changes the let=x to 12
-//  x = 12
-
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-//middle box size
-//let rect_width  = 20;
-//let rect_height = 20;
-//PBA example
-//let x_example = 13;
-//let y_example = 7;
-
-//colour has to be on top of parameter!!!!!!!
-
-  //stroke(252, 162, 176); //RGB pink
-  //line(1, 1, 200, 200); //top left
-  //line(200, 1, 1, 200); //top right
-
-  //middle box
-  //stroke(252, 162, 176); //RGB pink
-  //fill(204, 244, 252);
-  //rect(90 , 90, rect_width, rect_height);
-
-  //stroke(15, 215, 255); //RGB value
-  //fill(15, 215, 255);
-  //ellipse(100, 100, ellipse_width, ellipse_height);
-
-  //stroke(252, 162, 176); //RGB pink
-  //line(50, 50, 50, 150);
-  //line(50, 150, 150, 150);
-  //line(150, 150, 150, 50);
-  //line(150, 50, 50, 50);
-
-// across, down/up, across, downup
-
-//if statements
-//if(ellipse_width > 15){
-
-  //rect(100, 100, 100, 100)
-
 }
-//else{
-  //ellipse (100, 100, 100, 100)
-
-//}
-
-
-
-//}
-
-
-
-
-
-
-
-
-
-  //testing
-  //rect(40 ,40, rect_width, rect_height);
-  //ellipse(20 , 20, 50, 50);
-  //rect(120, 120, 30, 20);
-  //rect(110, 110, 40, 40);
-  //!!reminder parameters, POSITION, SIZE | x = across, y = up and down, width first, then height
-  //line(1, 1, 200, 200);
-  //!!line parameters... first point x/across, y/vertical, second point x/across, y/vertical
-  //!!further down in code, is on top, first line of code is at the bottom
-  
-  
-//diamond
-// line(middleX, middleY-size, middleX+size, middleY);
-// line(middleX+size, middleY, middleX, middleY+size);
-// line(middleX, middleY+size, middleX-size, middleY);
-// line(middleX -size, middleY, middleX, middleY-size);

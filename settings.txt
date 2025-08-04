@@ -10,13 +10,19 @@ Your final settings.txt will look something like this when you are finished:
 Wallpaper 1:
 
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+//Diamond perameters
+let verticleXline = 100; //verticle line down the middle of diamond
+let horizontalYline = 100; // horizontal line across the middle of diamond
+let diamondsize = 30; //size of diamond
+//fillage
+let cornerfillage_width = 175;
+let cornerfillage_height = 175;
+let extracircle = 20; //yellow circle behind size compared to mini circle
+//starshape
+let seventyfive_point = 75; 
+let onetwentyfive_point = 125; 
+let starsize_pos = 175; //how long the star-points are down and right (usually 175)
+let starsize_neg = 25; //how long the star-points are up and left (usually 25)
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -26,7 +32,7 @@ function setup_wallpaper(pWallpaper) {
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 100;
   pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.row_offset  = 0;
 }
 
 /////////////////////////////////
@@ -34,13 +40,229 @@ function setup_wallpaper(pWallpaper) {
 Wallpaper 2:
 
 //your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+//Diamond perameters
+let verticleXline = 100; //verticle line down the middle of diamond
+let horizontalYline = 100; // horizontal line across the middle of diamond
+let diamondsize = 75; //size of diamond
+//fillage
+let cornerfillage_width = 175;
+let cornerfillage_height = 175;
+let extracircle = 20; //yellow circle behind size compared to mini circle
+//starshape
+let seventyfive_point = 75; 
+let onetwentyfive_point = 125; 
+let starsize_pos = 175; //how long the star-points are down and right (usually 175)
+let starsize_neg = 25; //how long the star-points are up and left (usually 25)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 3:
+
+//your parameter variables go here!
+//Diamond perameters
+let verticleXline = 100; //verticle line down the middle of diamond
+let horizontalYline = 100; // horizontal line across the middle of diamond
+let diamondsize = 100; //size of diamond
+//fillage
+let cornerfillage_width = 75;
+let cornerfillage_height = 75;
+let extracircle = 20; //yellow circle behind size compared to mini circle
+//starshape
+let seventyfive_point = 75; 
+let onetwentyfive_point = 125; 
+let starsize_pos = 175; //how long the star-points are down and right (usually 175)
+let starsize_neg = 25; //how long the star-points are up and left (usually 25)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 4:
+
+//your parameter variables go here!
+//Diamond perameters
+let verticleXline = 100; //verticle line down the middle of diamond
+let horizontalYline = 100; // horizontal line across the middle of diamond
+let diamondsize = 30; //size of diamond
+//fillage
+let cornerfillage_width = 50;
+let cornerfillage_height = 50;
+let extracircle = 20; //yellow circle behind size compared to mini circle
+//starshape
+let seventyfive_point = 75; 
+let onetwentyfive_point = 125; 
+let starsize_pos = 175; //how long the star-points are down and right (usually 175)
+let starsize_neg = 25; //how long the star-points are up and left (usually 25)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 5:
+
+//your parameter variables go here!
+//Diamond perameters
+let verticleXline = 100; //verticle line down the middle of diamond
+let horizontalYline = 100; // horizontal line across the middle of diamond
+let diamondsize = 30; //size of diamond
+//fillage
+let cornerfillage_width = 50;
+let cornerfillage_height = 50;
+let extracircle = 70; //yellow circle behind size compared to mini circle
+//starshape
+let seventyfive_point = 75; 
+let onetwentyfive_point = 125; 
+let starsize_pos = 200; //how long the star-points are down and right (usually 175)
+let starsize_neg = 0; //how long the star-points are up and left (usually 25)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 6:
+
+//your parameter variables go here!
+//Diamond perameters
+let verticleXline = 100; //verticle line down the middle of diamond
+let horizontalYline = 100; // horizontal line across the middle of diamond
+let diamondsize = 70; //size of diamond
+//fillage
+let cornerfillage_width = 70;
+let cornerfillage_height = 70;
+let extracircle = 50; //yellow circle behind size compared to mini circle
+//starshape
+let seventyfive_point = 50; 
+let onetwentyfive_point = 150; 
+let starsize_pos = 200; //how long the star-points are down and right (usually 175)
+let starsize_neg = 0; //how long the star-points are up and left (usually 25)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 7:
+
+//your parameter variables go here!
+//Diamond perameters
+let verticleXline = 100; //verticle line down the middle of diamond
+let horizontalYline = 100; // horizontal line across the middle of diamond
+let diamondsize = 100; //size of diamond
+//fillage
+let cornerfillage_width = 70;
+let cornerfillage_height = 160;
+let extracircle = 15; //yellow circle behind size compared to mini circle
+//starshape
+let seventyfive_point = 125; 
+let onetwentyfive_point = 75; 
+let starsize_pos = 200; //how long the star-points are down and right (usually 175)
+let starsize_neg = 0; //how long the star-points are up and left (usually 25)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 8:
+
+//your parameter variables go here!
+//Diamond perameters
+let verticleXline = 100; //verticle line down the middle of diamond
+let horizontalYline = 100; // horizontal line across the middle of diamond
+let diamondsize = 90; //size of diamond
+//fillage
+let cornerfillage_width = 40;
+let cornerfillage_height = 40;
+let extracircle = 150; //yellow circle behind size compared to mini circle
+//starshape
+let seventyfive_point = 75; 
+let onetwentyfive_point = 125; 
+let starsize_pos = 175; //how long the star-points are down and right (usually 175)
+let starsize_neg = 25; //how long the star-points are up and left (usually 25)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+/////////////////////////////////
+
+Wallpaper 9:
+
+//your parameter variables go here!
+//Diamond perameters
+let verticleXline = 50; //verticle line down the middle of diamond
+let horizontalYline = 50; // horizontal line across the middle of diamond
+let diamondsize = 80; //size of diamond
+//fillage
+let cornerfillage_width = 160;
+let cornerfillage_height = 160;
+let extracircle = 150; //yellow circle behind size compared to mini circle
+//starshape
+let seventyfive_point = 75; 
+let onetwentyfive_point = 125; 
+let starsize_pos = 175; //how long the star-points are down and right (usually 175)
+let starsize_neg = 25; //how long the star-points are up and left (usually 25)
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
