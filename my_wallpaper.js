@@ -41,7 +41,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 fill(200,40,200) //colour of diamond 
  
 
-  if(diamondsize ){
+  if(diamondsize > 30){
 
     fill(100, 60, 100);
   }else{
