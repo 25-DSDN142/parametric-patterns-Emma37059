@@ -6,10 +6,6 @@ let diamondsize = 30; //size of diamond
 //fillage
 let cornerfillage_width = 50;
 let cornerfillage_height = 50;
-//leaf perameters / size
-let leaf_length = 50;
-let leaf_thickness = 50;
-let = leafsize = 50;
 
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -37,34 +33,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 
 
-//arc(25, 0, leaf_length, leaf_thickness, 0, 180) //side
-//arc(0, 25, leaf_thickness, leaf_length, 270, 90) //bottom
-
-
-
-
-endShape(CLOSE);
-
-beginShape();
-
-noStroke()
-fill(204, 108, 231); //random colour
-//botom right
-arc(200, 175, leaf_length, leaf_thickness, 90, 270); //side
-arc(175, 200, leaf_thickness, leaf_length, 180, 0); //bottom
-//x, y, width, height
-//bottom left
-arc(25, 200, leaf_length, leaf_thickness, 180, 0) //bottom
-arc(0, 175, leaf_thickness, leaf_length, 270, 90) //side
-//top right
-arc(200, 25, leaf_length, leaf_thickness, 90, 270) //side
-arc(175, 0, leaf_thickness, leaf_length, 0, 180) //bottom
-//top left
-arc(25, 0, leaf_length, leaf_thickness, 0, 180) //side
-arc(0, 25, leaf_thickness, leaf_length, 270, 90) //bottom
-
-//x, y is the arc centre, w, h, start and stop //code found on p5.js with tutorial
-
 
 fill(200,40,200) //colour of diamond 
  
@@ -86,7 +54,22 @@ fill(200,40,200) //colour of diamond
   endShape(CLOSE);
 
 
-  ellipse(200, 200, cornerfillage_width, cornerfillage_height);
+  //ellipse(200, 200, cornerfillage_width, cornerfillage_height);
+
+arc(200, 175, leaf_length, leaf_thickness, 90, 270); //side
+arc(175, 200, leaf_thickness, leaf_length, 180, 0); //bottom
+//x, y, width, height
+//bottom left
+arc(25, 200, leaf_length, leaf_thickness, 180, 0) //bottom
+arc(0, 175, leaf_thickness, leaf_length, 270, 90) //side
+//top right
+arc(200, 25, leaf_length, leaf_thickness, 90, 270) //side
+arc(175, 0, leaf_thickness, leaf_length, 0, 180) //bottom
+//top left
+arc(25, 0, leaf_length, leaf_thickness, 0, 180) //side
+arc(0, 25, leaf_thickness, leaf_length, 270, 90) //bottom
+
+//x, y is the arc centre, w, h, start and stop //code found on p5.js with tutorial
 
 
 
